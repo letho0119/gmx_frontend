@@ -119,6 +119,12 @@ import { RedirectPopupModal } from "./components/ModalViews/RedirectModal";
 import { REDIRECT_POPUP_TIMESTAMP_KEY } from "./utils/constants";
 import Jobs from "./views/Jobs/Jobs";
 
+import twitterIcon from "./img/ic_twitter.svg";
+import discordIcon from "./img/ic_discord.svg";
+import telegramIcon from "./img/ic_telegram.svg";
+import githubIcon from "./img/ic_github.svg";
+import mediumIcon from "./img/ic_medium.svg";
+
 if ("ethereum" in window) {
   window.ethereum.autoRefreshOnNetworkChange = false;
 }
@@ -170,6 +176,13 @@ function getWsProvider(active, chainId) {
   }
 }
 
+const socialLinks = [
+  { link: "https://Twitter.com/divvyfi", name: "Twitter", icon: twitterIcon },
+  { link: "https://docs.divvy.gg", name: "Medium", icon: mediumIcon },
+  { link: "https://t.me/divvy", name: "Telegram", icon: telegramIcon },
+  { link: "https://discord.gg/divvy", name: "Discord", icon: discordIcon },
+];
+
 function AppHeaderLinks({ HeaderLink, small, openSettings, clickCloseIcon }) {
   return (
     <div className="App-header-links">
@@ -186,15 +199,16 @@ function AppHeaderLinks({ HeaderLink, small, openSettings, clickCloseIcon }) {
       <div className="App-header-link-container">
         <HeaderLink to="/trade">
           <span style={{ display: "flex", alignItems: "center" }}>
-            <img src={TRADE} alt="trade" style={{ width: "50px;", height: "50px", marginRight: "20px" }}></img>
+            <img src={TRADE} alt="trade" style={{ width: "40px;", height: "40px", marginRight: "20px" }}></img>
             <span style={{ fontSize: "20px" }}>Trade</span>
           </span>
         </HeaderLink>
       </div>
+      <div style={{ borderStyle: "solid", borderWidth: "0px 0px 1px 0px", marginLeft: "15px" }}></div>
       <div className="App-header-link-container">
         <HeaderLink to="/earn">
           <span style={{ display: "flex", alignItems: "center" }}>
-            <img src={EARN} alt="earn" style={{ width: "50px;", height: "50px", marginRight: "20px" }}></img>
+            <img src={EARN} alt="earn" style={{ width: "40px;", height: "40px", marginRight: "20px" }}></img>
             <span style={{ fontSize: "20px" }}>Earn</span>
           </span>
         </HeaderLink>
@@ -202,7 +216,7 @@ function AppHeaderLinks({ HeaderLink, small, openSettings, clickCloseIcon }) {
       <div className="App-header-link-container">
         <HeaderLink to="/buy">
           <span style={{ display: "flex", alignItems: "center" }}>
-            <img src={BUY} alt="buy" style={{ width: "50px;", height: "50px", marginRight: "20px" }}></img>
+            <img src={BUY} alt="buy" style={{ width: "40px;", height: "40px", marginRight: "20px" }}></img>
             <span style={{ fontSize: "20px" }}>Buy</span>
           </span>
         </HeaderLink>
@@ -210,7 +224,7 @@ function AppHeaderLinks({ HeaderLink, small, openSettings, clickCloseIcon }) {
       <div className="App-header-link-container">
         <HeaderLink to="/referrals">
           <span style={{ display: "flex", alignItems: "center" }}>
-            <img src={REFERRALS} alt="Referrals" style={{ width: "50px;", height: "50px", marginRight: "20px" }}></img>
+            <img src={REFERRALS} alt="Referrals" style={{ width: "40px;", height: "40px", marginRight: "20px" }}></img>
             <span style={{ fontSize: "20px" }}>Referrals</span>
           </span>
         </HeaderLink>
@@ -218,12 +232,29 @@ function AppHeaderLinks({ HeaderLink, small, openSettings, clickCloseIcon }) {
       <div className="App-header-link-container">
         <HeaderLink to="/dashboard">
           <span style={{ display: "flex", alignItems: "center" }}>
-            <img src={STATS} alt="stats" style={{ width: "50px;", height: "50px", marginRight: "20px" }}></img>
+            <img src={STATS} alt="stats" style={{ width: "40px;", height: "40px", marginRight: "20px" }}></img>
             <span style={{ fontSize: "20px" }}>Stats</span>
           </span>
         </HeaderLink>
       </div>
-
+      <div
+        style={{ borderStyle: "solid", borderWidth: "0px 0px 1px 0px", marginLeft: "15px", marginTop: "30px" }}
+      ></div>
+      <div className="Footer-social-link-block">
+        {socialLinks.map((platform) => {
+          return (
+            <a
+              key={platform.name}
+              className="App-social-link"
+              href={platform.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={platform.icon} alt={platform.name} />
+            </a>
+          );
+        })}
+      </div>
       {small && !isHomeSite() && (
         <div className="App-header-link-container">
           {/* eslint-disable-next-line */}

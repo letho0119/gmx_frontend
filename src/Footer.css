@@ -26,6 +26,7 @@
   margin: 0 auto;
   display: flex;
   justify-content: center;
+  margin-top: 2.4rem;
   margin-bottom: 2.4rem;
 }
 .Footer-link {
@@ -41,10 +42,10 @@
 }
 
 .Footer-social-link-block .App-social-link {
-  margin: 0 3.2rem;
+  margin: 0 5px;
   display: flex;
-  width: 3.2rem;
-  height: 3.2rem;
+  width: 2.2rem;
+  height: 2.2rem;
   align-items: center;
   justify-content: center;
 }
