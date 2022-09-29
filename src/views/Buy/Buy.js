@@ -21,7 +21,6 @@ export default function BuyGMXGLP() {
           </div>
           <TokenCard />
         </div>
-        <Footer />
       </div>
     </SEO>
   );

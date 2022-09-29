@@ -284,7 +284,6 @@ export default function BeginAccountTransfer(props) {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

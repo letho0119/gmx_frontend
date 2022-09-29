@@ -991,7 +991,6 @@ export const Exchange = forwardRef((props, ref) => {
         </div>
         <div className="Exchange-lists small">{getListSection()}</div>
       </div>
-      <Footer />
     </div>
   );
 });

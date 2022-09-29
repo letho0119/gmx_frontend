@@ -51,7 +51,6 @@ function Jobs() {
           </Card>
         </div>
       </div>
-      <Footer />
     </SEO>
   );
 }

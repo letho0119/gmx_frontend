@@ -20,9 +20,9 @@
   padding: 2.325rem;
   border-radius: 1.3rem;
   max-width: 59.2rem;
-  background: #16182e;
-  box-shadow: 0px 0.5rem 1.3rem #00000085;
-  border: 1px solid #2a2b3d;
+  /*background: #16182e;*/
+  background: linear-gradient(#343940,#16171a);
+  box-shadow: 0 .5rem 1.3rem rgba(0,0,0,.5215686274509804);
   border-radius: 0.4rem;
 }
 .referral-card .title {
@@ -267,7 +267,8 @@
   padding: 1.5rem;
   border: 1px solid #1e2136;
   border-radius: 0.4rem;
-  background: #16182e;
+  /*background: #16182e;*/
+  background: linear-gradient(#343940,#16171a);
   font-size: 1.5rem;
 }
 .confirm-checkbox .Checkbox {

@@ -7,7 +7,8 @@ body,
   padding: 0;
   color: white;
   font-size: 10px;
-  background-color: #101124;
+  background-color: #171719;
+  /*background-color: #101124;*/
 }
 
 * {
@@ -180,7 +181,8 @@ a.plain {
 }
 
 .default-btn {
-  background: #2d42fc;
+  /*background: #2d42fc;*/
+  background: #129232;
   border-radius: 4px;
   font-size: 1.4rem;
   line-height: 2rem;
@@ -364,6 +366,7 @@ button.btn-link:hover .logout-icon {
   flex-direction: column;
   padding-bottom: calc(4.65rem + 20rem);
   padding-top: 4.65rem;
+  padding-left: 24rem;
 }
 
 .d-flex {

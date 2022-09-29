@@ -133,7 +133,6 @@ function Referrals({ connectWallet, setPendingTxns, pendingTxns }) {
         </div>
         {activeTab === AFFILIATES ? renderAffiliatesTab() : renderTradersTab()}
       </div>
-      <Footer />
     </SEO>
   );
 }

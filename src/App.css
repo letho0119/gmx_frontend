@@ -25,10 +25,7 @@
   display: flex;
   justify-content: space-between;
   position: relative;
-  padding-left: 3.2rem;
-  padding-right: 3.2rem;
   background: transparent 0% 0% no-repeat padding-box;
-  border-bottom: 1px solid #ffffff10;
 }
 
 .App-header.large::after {
@@ -43,6 +40,8 @@
 
 .App-header.large .App-header-links {
   display: flex;
+  flex-direction: column;
+  padding-right: 3.2rem;
 }
 
 .App-header.small {
@@ -103,8 +102,10 @@
 }
 
 .App-header-container-left {
-  display: flex;
   align-items: center;
+    height: 100vw;
+    width: 20rem;
+    background: black;
 }
 
 .App-header-top {
@@ -152,10 +153,14 @@
 .App-box-highlight,
 .App-box-solid {
   position: relative;
-  border: 1px solid #1e2136;
+  /*border: 1px solid #1e2136;
   border-radius: 0.4rem;
   background: #16182e;
+  border: ;
+  border-radius: ;*/
+  background: linear-gradient(#343940,#16171a);
   font-size: 1.5rem;
+  box-shadow: 0 .5rem 1.3rem rgba(0,0,0,.5215686274509804);
 }
 
 .App-card-bottom-placeholder {
@@ -177,7 +182,8 @@
 }
 
 .App-card-long {
-  background: #16182e;
+  /*background: #16182e;*/
+  background: linear-gradient(#343940,#16171a);
   margin-bottom: 2.4rem;
 }
 
@@ -529,7 +535,6 @@ button.App-connect-wallet:hover {
 
 .App-card {
   padding: 1.5rem 1.5rem 1.86rem;
-  border: 1px solid #1e2136;
   border-radius: 0.4rem;
   font-size: 1.5rem;
 }
@@ -607,9 +612,10 @@ button.App-connect-wallet:hover {
 }
 
 .App-header-link-main img {
-  display: inline-block;
-  height: 2.15rem;
-  vertical-align: middle;
+  display: inline;
+  height: 12.15rem;
+  align-items: center;
+  margin-top: -30px;
 }
 
 .App-header-link-main img.small {
@@ -628,13 +634,13 @@ button.App-connect-wallet:hover {
 .App-header a.active {
   pointer-events: none;
   opacity: 1;
-  color: #eee;
+  color: green;
 }
 
 .App-header .a:hover,
 .App-header a:hover {
   opacity: 1;
-  color: #eee;
+  color: green;
 }
 
 .App-header-container-left .a,
@@ -786,13 +792,14 @@ a.App-cta,
 button.App-cta {
   color: white;
   text-decoration: none;
-  background: linear-gradient(90deg, rgba(45, 66, 252, 1) 0%, rgba(46, 61, 205, 1) 100%);
+  /*background: linear-gradient(90deg, rgba(45, 66, 252, 1) 0%, rgba(46, 61, 205, 1) 100%);*/
+  background:#129232;
   /* box-shadow: 0 0 0.4rem 0.6rem rgba(45,66,252,0.15); */
 }
 
 a.App-cta:hover,
 button.App-cta:hover:enabled {
-  background: linear-gradient(90deg, rgba(58, 78, 252, 1) 0%, rgba(51, 68, 222, 1) 100%);
+  background: #adff2fcc;
   box-shadow: 0 0 0.4rem 0.6rem rgba(45, 66, 252, 0.2);
 }
 
@@ -839,7 +846,8 @@ button.App-button-option {
   display: inline-flex !important;
   align-items: center;
   border: none;
-  background: rgba(43, 55, 94, 1);
+  /*background: rgba(43, 55, 94, 1);*/
+  background: #129232;
 }
 
 a.App-button-option:hover,
@@ -855,6 +863,11 @@ button.App-button-option:disabled {
 .App-header-container-right {
   display: flex;
   align-items: center;
+  flex-direction: row-reverse;
+  position: relative;
+  margin-left: 100px;
+  margin: -50v;
+  margin-top: 1rem;
 }
 
 .App-header-user {
@@ -1231,7 +1244,12 @@ button.App-button {
 
   .App-header-container-right {
     display: flex;
-    align-items: center;
+   align-items: center;
+   flex-direction: row-reverse;
+  position: relative;
+  margin-left: 40vh;
+
+  margin-top: 1rem;
   }
 
   .App-header-link-desktop {

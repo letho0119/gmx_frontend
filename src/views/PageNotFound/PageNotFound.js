@@ -21,7 +21,6 @@ function PageNotFound() {
             </p>
           </div>
         </div>
-        <Footer />
       </div>
     </SEO>
   );

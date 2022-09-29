@@ -20,6 +20,11 @@ a.btn {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.btn.btn-primary.btn-sm.connect-wallet {
+  box-shadow: 2px 2px 4px rgba(0,0,0,.3),-2px -2px 4px rgba(166,163,163,.3);
+  background: #22262a;
+  border: none;
+}
 .btn-sm {
   padding: 0.5rem 1.4rem;
 }

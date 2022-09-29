@@ -1,7 +1,8 @@
 .card {
   border: 1px solid #1e2136;
   border-radius: 0.4rem;
-  background: #16182e;
+  /*background: #16182e;*/
+  background: linear-gradient(#343940,#16171a);
 }
 
 .card-header {

@@ -179,10 +179,8 @@ function AppHeaderLinks({ HeaderLink, small, openSettings, clickCloseIcon }) {
           </HeaderLink>
         </div>
       )}
-      <div className="App-header-link-container App-header-link-home">
-        <HeaderLink to="/" exact={true} isHomeLink={true}>
-          Home
-        </HeaderLink>
+      <div className="App-header-link-container">
+        <HeaderLink to="/trade">Trade</HeaderLink>
       </div>
       <div className="App-header-link-container">
         <HeaderLink to="/dashboard">Dashboard</HeaderLink>
@@ -196,14 +194,7 @@ function AppHeaderLinks({ HeaderLink, small, openSettings, clickCloseIcon }) {
       <div className="App-header-link-container">
         <HeaderLink to="/referrals">Referrals</HeaderLink>
       </div>
-      <div className="App-header-link-container">
-        <HeaderLink to="/ecosystem">Ecosystem</HeaderLink>
-      </div>
-      <div className="App-header-link-container">
-        <a href="https://gmxio.gitbook.io/gmx/" target="_blank" rel="noopener noreferrer">
-          About
-        </a>
-      </div>
+
       {small && !isHomeSite() && (
         <div className="App-header-link-container">
           {/* eslint-disable-next-line */}
@@ -282,11 +273,6 @@ const AppHeaderUser = ({
   if (!active) {
     return (
       <div className="App-header-user">
-        <div className="App-header-user-link">
-          <HeaderLink activeClassName="active" className="default-btn" to="/trade">
-            Trade
-          </HeaderLink>
-        </div>
         {showConnectionOptions && (
           <NetworkSelector
             options={networkOptions}
@@ -312,11 +298,6 @@ const AppHeaderUser = ({
 
   return (
     <div className="App-header-user">
-      <div className="App-header-user-link">
-        <HeaderLink activeClassName="active" className="default-btn" to="/trade">
-          Trade
-        </HeaderLink>
-      </div>
       {showConnectionOptions && (
         <NetworkSelector
           options={networkOptions}
@@ -736,7 +717,7 @@ const FullApp = () => {
             <div className="App-header large">
               <div className="App-header-container-left">
                 <HeaderLink isHomeLink={true} exact={true} className="App-header-link-main" to="/">
-                  <img src={logoImg} className="big" alt="GMX Logo" />
+                  <img src="https://i.ibb.co/K9wgdKH/z-AKa-Mj-PQ-removebg-preview.png" className="big" alt="GMX Logo" />
                   <img src={logoSmallImg} className="small" alt="GMX Logo" />
                 </HeaderLink>
                 <AppHeaderLinks HeaderLink={HeaderLink} />
@@ -865,9 +846,6 @@ const FullApp = () => {
               </Route>
               <Route exact path="/buy_gmx">
                 <BuyGMX />
-              </Route>
-              <Route exact path="/ecosystem">
-                <Ecosystem />
               </Route>
               <Route exact path="/referrals">
                 <Referrals pendingTxns={pendingTxns} connectWallet={connectWallet} setPendingTxns={setPendingTxns} />

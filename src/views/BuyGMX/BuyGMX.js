@@ -248,7 +248,6 @@ export default function BuyGMX() {
           </div>
         )}
       </div>
-      <Footer />
     </div>
   );
 }

@@ -299,8 +299,10 @@
 
 .ExchangeChart.tv .ExchangeChart-top {
   position: relative;
-  padding: 0.9rem 0.31rem;
-  z-index: 2;
+ padding: .9rem .31rem;
+ z-index: 2;
+ background: none;
+ box-shadow: none;
 }
 
 .ExchangeChart.tv .ExchangeChart-bottom {
@@ -310,6 +312,8 @@
   right: 0;
   top: 6.975rem;
   z-index: 1;
+  background: none;
+  box-shadow: none;
 }
 .ExchangeChart-bottom-controls {
   display: inline-block;
@@ -364,6 +368,7 @@
   left: 0;
   right: 0;
   top: 0.8rem;
+  background: black;
 }
 
 .Exchange-price-tooltip {
@@ -655,7 +660,8 @@ table.Exchange-list th {
   padding: 1.5rem;
   margin-bottom: 1.05rem;
   border-radius: 0.3rem;
-  background: linear-gradient(90deg, rgba(30, 34, 61, 0.9) 0%, rgba(38, 43, 71, 0.9) 100%);
+  /*background: linear-gradient(90deg, rgba(30, 34, 61, 0.9) 0%, rgba(38, 43, 71, 0.9) 100%);*/
+  background: #3dfe3d14;
   box-shadow: inset 0px 0px 3rem 0.5rem rgba(255, 255, 255, 0.01);
 }
 
@@ -704,12 +710,12 @@ table.Exchange-list th {
   top: 0;
   padding: 0.465rem 0.8rem;
   color: rgba(255, 255, 255, 0.7);
-  outline: 1rem solid rgba(33, 37, 64, 1);
+  /*outline: 1rem solid rgb(33, 64, 33);*/
   border-radius: 3px;
   z-index: 1;
   cursor: pointer;
   font-size: 1.5rem;
-  background: linear-gradient(90deg, rgba(45, 66, 252, 1) 0%, rgba(46, 61, 205, 1) 100%);
+  background: linear-gradient(90deg, rgb(45, 252, 62) 0%, rgb(51, 205, 46) 100%);
 }
 
 .Exchange-swap-max:hover {
@@ -769,7 +775,7 @@ input.Exchange-swap-input.small {
   border-radius: 3.1rem;
   cursor: pointer;
   user-select: none;
-  background: linear-gradient(90deg, rgba(45, 66, 252, 1) 0%, rgba(46, 61, 205, 1) 100%);
+  background: linear-gradient(90deg,#0da434,#113c24);
   display: flex;
   justify-content: center;
   align-items: center;

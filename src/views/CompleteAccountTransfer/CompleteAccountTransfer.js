@@ -127,7 +127,6 @@ export default function CompleteAccountTransfer(props) {
           </div>
         </div>
       )}
-      <Footer />
     </div>
   );
 }
