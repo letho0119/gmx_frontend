@@ -7,7 +7,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Web3ReactProvider, useWeb3React } from "@web3-react/core";
 import { Web3Provider } from "@ethersproject/providers";
 import useScrollToTop from "./hooks/useScrollToTop";
-
+import TRADE from "./img/trade.jpg";
+import EARN from "./img/earn.jpg";
+import BUY from "./img/buy.jpg";
+import STATS from "./img/stats.jpg";
+import REFERRALS from "./img/referrals.jpg";
 import { Switch, Route, NavLink, HashRouter as Router, Redirect, useLocation, useHistory } from "react-router-dom";
 
 import {
@@ -180,19 +184,44 @@ function AppHeaderLinks({ HeaderLink, small, openSettings, clickCloseIcon }) {
         </div>
       )}
       <div className="App-header-link-container">
-        <HeaderLink to="/trade">Trade</HeaderLink>
+        <HeaderLink to="/trade">
+          <span style={{ display: "flex", alignItems: "center" }}>
+            <img src={TRADE} alt="trade" style={{ width: "50px;", height: "50px", marginRight: "20px" }}></img>
+            <span style={{ fontSize: "20px" }}>Trade</span>
+          </span>
+        </HeaderLink>
       </div>
       <div className="App-header-link-container">
-        <HeaderLink to="/dashboard">Dashboard</HeaderLink>
+        <HeaderLink to="/earn">
+          <span style={{ display: "flex", alignItems: "center" }}>
+            <img src={EARN} alt="earn" style={{ width: "50px;", height: "50px", marginRight: "20px" }}></img>
+            <span style={{ fontSize: "20px" }}>Earn</span>
+          </span>
+        </HeaderLink>
       </div>
       <div className="App-header-link-container">
-        <HeaderLink to="/earn">Earn</HeaderLink>
+        <HeaderLink to="/buy">
+          <span style={{ display: "flex", alignItems: "center" }}>
+            <img src={BUY} alt="buy" style={{ width: "50px;", height: "50px", marginRight: "20px" }}></img>
+            <span style={{ fontSize: "20px" }}>Buy</span>
+          </span>
+        </HeaderLink>
       </div>
       <div className="App-header-link-container">
-        <HeaderLink to="/buy">Buy</HeaderLink>
+        <HeaderLink to="/referrals">
+          <span style={{ display: "flex", alignItems: "center" }}>
+            <img src={REFERRALS} alt="Referrals" style={{ width: "50px;", height: "50px", marginRight: "20px" }}></img>
+            <span style={{ fontSize: "20px" }}>Referrals</span>
+          </span>
+        </HeaderLink>
       </div>
       <div className="App-header-link-container">
-        <HeaderLink to="/referrals">Referrals</HeaderLink>
+        <HeaderLink to="/dashboard">
+          <span style={{ display: "flex", alignItems: "center" }}>
+            <img src={STATS} alt="stats" style={{ width: "50px;", height: "50px", marginRight: "20px" }}></img>
+            <span style={{ fontSize: "20px" }}>Stats</span>
+          </span>
+        </HeaderLink>
       </div>
 
       {small && !isHomeSite() && (

@@ -2155,7 +2155,6 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

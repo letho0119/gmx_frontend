@@ -683,8 +683,6 @@ export default function DashboardV1() {
           ))}
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 }
