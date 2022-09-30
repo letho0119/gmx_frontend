@@ -1119,11 +1119,11 @@ button.App-button {
 }
 
 .App-slider .rc-slider-rail {
-  background: linear-gradient(90deg, rgba(30, 34, 61, 1) 0%, rgba(40, 45, 74, 1) 100%);
+  background: linear-gradient(90deg, rgb(31, 61, 30) 0%, rgb(40, 74, 40) 100%);
 }
 
 .App-slider .rc-slider-track {
-  background: linear-gradient(90deg, rgba(46, 61, 205, 1) 0%, rgba(45, 66, 252, 1) 100%);
+  background: linear-gradient(90deg, rgb(46, 205, 99) 0%, rgb(45, 252, 97) 100%);
 }
 
 .App-slider .rc-slider-dot {
@@ -1131,20 +1131,20 @@ button.App-button {
   border-radius: 1px;
   width: 2px;
   margin-left: -1px;
-  background: rgba(40, 45, 74, 1);
+  background: rgb(40, 74, 51);
 }
 
 .App-slider .rc-slider-dot-active {
-  background: #3d51ff;
+  background: #43ff3d;
 }
 
 .App-slider .rc-slider-handle {
   background: #303652;
-  border: solid 2px rgba(45, 66, 252, 1);
+  border: solid 2px rgb(45, 252, 124);
 }
 
 .App-slider .rc-slider-handle:active {
-  box-shadow: 0 0 0.4rem 0.6rem rgba(45, 66, 252, 0.2);
+  box-shadow: 0 0 0.4rem 0.6rem rgba(93, 252, 45, 0.2);
 }
 
 .App-slider .rc-slider-mark-text,
@@ -1165,15 +1165,15 @@ button.App-button {
 .rc-slider-tooltip-inner {
   box-shadow: none;
   padding: 0.465rem 0.8rem;
-  background: #303652;
+  background: #30523b;
 }
 
 .rc-slider-tooltip-placement-top .rc-slider-tooltip-arrow {
-  border-top-color: #303652;
+  border-top-color: #305233;
 }
 
 .header-connect-btn {
-  background: #3b43e3;
+  background: #3be365;
 }
 
 .header-connect-btn:hover {
