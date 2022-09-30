@@ -11,7 +11,7 @@ import { ARBITRUM, AVALANCHE, switchNetwork, useChainId, isHomeSite } from "../.
 import { useWeb3React } from "@web3-react/core";
 
 import APRLabel from "../APRLabel/APRLabel";
-
+import logosmall_divvy from "../../img/divvy.png";
 export default function TokenCard({ showRedirectModal }) {
   const isHome = isHomeSite();
   const { chainId } = useChainId();
@@ -53,11 +53,11 @@ export default function TokenCard({ showRedirectModal }) {
     <div className="Home-token-card-options">
       <div className="Home-token-card-option">
         <div className="Home-token-card-option-icon">
-          <img src={gmxBigIcon} alt="gmxBigIcon" /> GMX
+          <img src={logosmall_divvy} style={{ width: "50px" }} alt="gmxBigIcon" /> DIV
         </div>
         <div className="Home-token-card-option-info">
           <div className="Home-token-card-option-title">
-            GMX is the utility and governance token. Accrues 30% of the platform's generated fees.
+            DIV is the utility and governance token. Accrues 30% of the platform's generated fees.
           </div>
           <div className="Home-token-card-option-apr">
             Arbitrum APR: <APRLabel chainId={ARBITRUM} label="gmxAprTotal" />, Avalanche APR:{" "}
@@ -70,6 +70,12 @@ export default function TokenCard({ showRedirectModal }) {
               </BuyLink>
               <BuyLink to="/buy_gmx" className="default-btn" network={AVALANCHE}>
                 Buy on Avalanche
+              </BuyLink>
+              <BuyLink to="/buy_gmx" className="default-btn" network={AVALANCHE}>
+                Buy on Binance
+              </BuyLink>
+              <BuyLink to="/buy_gmx" className="default-btn" network={AVALANCHE}>
+                Buy on Polygon
               </BuyLink>
             </div>
             <a
@@ -85,11 +91,11 @@ export default function TokenCard({ showRedirectModal }) {
       </div>
       <div className="Home-token-card-option">
         <div className="Home-token-card-option-icon">
-          <img src={glpBigIcon} alt="glpBigIcon" /> GLP
+          <img src={glpBigIcon} alt="glpBigIcon" /> DAT
         </div>
         <div className="Home-token-card-option-info">
           <div className="Home-token-card-option-title">
-            GLP is the liquidity provider token. Accrues 70% of the platform's generated fees.
+            DAT is the liquidity provider token. Accrues 70% of the platform's generated fees.
           </div>
           <div className="Home-token-card-option-apr">
             Arbitrum APR: <APRLabel chainId={ARBITRUM} label="glpAprTotal" key="ARBITRUM" />, Avalanche APR:{" "}
@@ -102,6 +108,12 @@ export default function TokenCard({ showRedirectModal }) {
               </BuyLink>
               <BuyLink to="/buy_glp" className="default-btn" network={AVALANCHE}>
                 Buy on Avalanche
+              </BuyLink>
+              <BuyLink to="/buy_glp" className="default-btn" network={ARBITRUM}>
+                Buy on Binance
+              </BuyLink>
+              <BuyLink to="/buy_glp" className="default-btn" network={AVALANCHE}>
+                Buy on Polygon
               </BuyLink>
             </div>
             <a

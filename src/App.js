@@ -92,6 +92,7 @@ import "./AppOrder.css";
 
 import logoImg from "./img/logo_GMX.svg";
 import logoSmallImg from "./img/logo_GMX_small.svg";
+import logosmall_divvy from "./img/divvy.png";
 import connectWalletImg from "./img/ic_wallet_24.svg";
 
 import metamaskImg from "./img/metamask.png";
@@ -192,7 +193,7 @@ function AppHeaderLinks({ HeaderLink, small, openSettings, clickCloseIcon }) {
             <FiX className="App-header-menu-icon" />
           </div>
           <HeaderLink isHomeLink={true} className="App-header-link-main" to="/">
-            <img src={logoImg} alt="GMX Logo" />
+            <img src={logosmall_divvy} alt="Divvy Logo Nav" style={{ marginTop: "20px" }} />
           </HeaderLink>
         </div>
       )}
@@ -458,7 +459,7 @@ const FullApp = () => {
           <a href="https://metamask.io" target="_blank" rel="noopener noreferrer">
             Install MetaMask
           </a>
-          {userOnMobileDevice ? ", and use GMX with its built-in browser" : " to start using GMX"}.
+          {userOnMobileDevice ? ", and use DIV with its built-in browser" : " to start using DIV"}.
         </div>
       );
       return false;
@@ -475,7 +476,7 @@ const FullApp = () => {
           <a href="https://www.coinbase.com/wallet" target="_blank" rel="noopener noreferrer">
             Install Coinbase Wallet
           </a>
-          {userOnMobileDevice ? ", and use GMX with its built-in browser" : " to start using GMX"}.
+          {userOnMobileDevice ? ", and use DIV with its built-in browser" : " to start using DIV"}.
         </div>
       );
       return false;
@@ -777,8 +778,8 @@ const FullApp = () => {
             <div className="App-header large">
               <div className="App-header-container-left">
                 <HeaderLink isHomeLink={true} exact={true} className="App-header-link-main" to="/">
-                  <img src="https://i.ibb.co/K9wgdKH/z-AKa-Mj-PQ-removebg-preview.png" className="big" alt="GMX Logo" />
-                  <img src={logoSmallImg} className="small" alt="GMX Logo" />
+                  <img src="https://i.ibb.co/K9wgdKH/z-AKa-Mj-PQ-removebg-preview.png" className="big" alt="DIV Logo" />
+                  <img src={logosmall_divvy} className="small" alt="DIV Logo" />
                 </HeaderLink>
                 <AppHeaderLinks HeaderLink={HeaderLink} />
               </div>
@@ -806,8 +807,8 @@ const FullApp = () => {
                     {isDrawerVisible && <FaTimes className="App-header-menu-icon" />}
                   </div>
                   <div className="App-header-link-main clickable" onClick={() => setIsDrawerVisible(!isDrawerVisible)}>
-                    <img src={logoImg} className="big" alt="GMX Logo" />
-                    <img src={logoSmallImg} className="small" alt="GMX Logo" />
+                    <img src={logosmall_divvy} className="big" alt="Divvy Logo Big" />
+                    <img src={logosmall_divvy} className="small" alt="Divvy Logo Small" />
                   </div>
                 </div>
                 <div className="App-header-container-right">

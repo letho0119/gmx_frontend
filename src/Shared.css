@@ -368,7 +368,16 @@ button.btn-link:hover .logout-icon {
   padding-top: 4.65rem;
   padding-left: 24rem;
 }
-
+@media (max-width: 600px) {
+  .page-layout {
+    min-height: calc(100vh - 62px);
+    display: flex;
+    flex-direction: column;
+    padding-bottom: calc(4.65rem + 20rem);
+    padding-top: 4.65rem;
+    padding-left: 0px;
+  }
+}
 .d-flex {
   display: flex;
 }

@@ -16,7 +16,7 @@ export default function BuyGMXGLP() {
               <img src={buyGMXIcon} alt="buyGMXIcon" />
             </div>
             <div className="section-title-content">
-              <div className="Page-title">Buy GMX or GLP</div>
+              <div className="Page-title">Buy DIV or DAT</div>
             </div>
           </div>
           <TokenCard />

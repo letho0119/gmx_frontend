@@ -1460,11 +1460,11 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
           <div className="Page-description">
             Stake{" "}
             <a href="https://gmxio.gitbook.io/gmx/tokenomics" target="_blank" rel="noopener noreferrer">
-              GMX
+              DIV
             </a>{" "}
             and{" "}
             <a href="https://gmxio.gitbook.io/gmx/glp" target="_blank" rel="noopener noreferrer">
-              GLP
+              DAT
             </a>{" "}
             to earn rewards.
           </div>

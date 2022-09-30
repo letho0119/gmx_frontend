@@ -102,12 +102,19 @@
 }
 
 .App-header-container-left {
-  align-items: center;
+    align-items: center;
     height: 100vw;
     width: 20rem;
     background: black;
 }
-
+@media (max-width: 600px) {
+  .App-header-container-left {
+    align-items: center;
+    height: 100vw;
+    width: 20rem;
+    background: none;
+  }
+}
 .App-header-top {
   width: 100%;
   position: relative;
@@ -615,7 +622,7 @@ button.App-connect-wallet:hover {
   display: inline;
   height: 12.15rem;
   align-items: center;
-  margin-top: -30px;
+  margin-top: -40px;
 }
 
 .App-header-link-main img.small {
@@ -1246,10 +1253,9 @@ button.App-button {
     display: flex;
    align-items: center;
    flex-direction: row-reverse;
-  position: relative;
-  margin-left: 40vh;
-
-  margin-top: 1rem;
+    position: relative;
+    margin-left:-20px;
+    margin-top: 1rem;
   }
 
   .App-header-link-desktop {
@@ -1261,7 +1267,8 @@ button.App-button {
   }
 
   .App-header-link-main img {
-    height: 2.1rem;
+    height: 5.1rem;
+    margin-left: 20px;
   }
 
   .App-header.large {
@@ -1367,6 +1374,7 @@ button.App-button {
   .App-header-menu-icon-block {
     margin-left: 0;
     margin-right: 0.4rem;
+    margin-top: 15px;
   }
 
   .App-header-menu-icon {
