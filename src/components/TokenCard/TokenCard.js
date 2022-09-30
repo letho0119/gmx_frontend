@@ -71,12 +71,6 @@ export default function TokenCard({ showRedirectModal }) {
               <BuyLink to="/buy_gmx" className="default-btn" network={AVALANCHE}>
                 Buy on Avalanche
               </BuyLink>
-              <BuyLink to="/buy_gmx" className="default-btn" network={AVALANCHE}>
-                Buy on Binance
-              </BuyLink>
-              <BuyLink to="/buy_gmx" className="default-btn" network={AVALANCHE}>
-                Buy on Polygon
-              </BuyLink>
             </div>
             <a
               href="https://gmxio.gitbook.io/gmx/tokenomics"
@@ -86,6 +80,16 @@ export default function TokenCard({ showRedirectModal }) {
             >
               Read more
             </a>
+          </div>
+          <div className="Home-token-card-option-action">
+            <div className="buy">
+              <BuyLink to="/buy_gmx" className="default-btn" network={ARBITRUM}>
+                Buy on Binance
+              </BuyLink>
+              <BuyLink to="/buy_gmx" className="default-btn" network={AVALANCHE}>
+                Buy on Polygon
+              </BuyLink>
+            </div>
           </div>
         </div>
       </div>
@@ -109,12 +113,6 @@ export default function TokenCard({ showRedirectModal }) {
               <BuyLink to="/buy_glp" className="default-btn" network={AVALANCHE}>
                 Buy on Avalanche
               </BuyLink>
-              <BuyLink to="/buy_glp" className="default-btn" network={ARBITRUM}>
-                Buy on Binance
-              </BuyLink>
-              <BuyLink to="/buy_glp" className="default-btn" network={AVALANCHE}>
-                Buy on Polygon
-              </BuyLink>
             </div>
             <a
               href="https://gmxio.gitbook.io/gmx/glp"
@@ -124,6 +122,16 @@ export default function TokenCard({ showRedirectModal }) {
             >
               Read more
             </a>
+          </div>
+          <div className="Home-token-card-option-action">
+            <div className="buy">
+              <BuyLink to="/buy_glp" className="default-btn" network={ARBITRUM}>
+                Buy on Binance
+              </BuyLink>
+              <BuyLink to="/buy_glp" className="default-btn" network={AVALANCHE}>
+                Buy on Polygon
+              </BuyLink>
+            </div>
           </div>
         </div>
       </div>
