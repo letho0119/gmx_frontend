@@ -465,13 +465,13 @@ function VesterDepositModal(props) {
                   onChange={(e) => setValue(e.target.value)}
                 />
               </div>
-              <div className="PositionEditor-token-symbol">esGMX</div>
+              <div className="PositionEditor-token-symbol">esDIV</div>
             </div>
           </div>
           <div className="VesterDepositModal-info-rows">
             <div className="Exchange-info-row">
               <div className="Exchange-info-label">Wallet</div>
-              <div className="align-right">{formatAmount(balance, 18, 2, true)} esGMX</div>
+              <div className="align-right">{formatAmount(balance, 18, 2, true)} esDIV</div>
             </div>
             <div className="Exchange-info-row">
               <div className="Exchange-info-label">Vault Capacity</div>
@@ -490,9 +490,9 @@ function VesterDepositModal(props) {
                         Vault Capacity for your Account
                         <br />
                         <br />
-                        Deposited: {formatAmount(vestedAmount, 18, 2, true)} esGMX
+                        Deposited: {formatAmount(vestedAmount, 18, 2, true)} esDIV
                         <br />
-                        Max Capacity: {formatAmount(maxVestableAmount, 18, 2, true)} esGMX
+                        Max Capacity: {formatAmount(maxVestableAmount, 18, 2, true)} esDIV
                         <br />
                       </>
                     );
@@ -524,7 +524,7 @@ function VesterDepositModal(props) {
                           <div>
                             <br />
                             You need a total of at least {formatAmount(nextReserveAmount, 18, 2, true)}{" "}
-                            {stakeTokenLabel} to vest {formatAmount(amount, 18, 2, true)} esGMX.
+                            {stakeTokenLabel} to vest {formatAmount(amount, 18, 2, true)} esDIV.
                           </div>
                         )}
                       </>
@@ -578,10 +578,10 @@ function VesterWithdrawModal(props) {
           This will withdraw and unreserve all tokens as well as pause vesting.
           <br />
           <br />
-          esGMX tokens that have been converted to GMX will remain as GMX tokens.
+          esDIV tokens that have been converted to DIV will remain as DIV tokens.
           <br />
           <br />
-          To claim GMX tokens without withdrawing, use the "Claim" button under the Total Rewards section.
+          To claim DIV tokens without withdrawing, use the "Claim" button under the Total Rewards section.
           <br />
           <br />
         </div>
@@ -751,22 +751,22 @@ function CompoundModal(props) {
           </div>
           <div>
             <Checkbox isChecked={shouldClaimGmx} setIsChecked={setShouldClaimGmx} disabled={shouldStakeGmx}>
-              Claim GMX Rewards
+              Claim DIV Rewards
             </Checkbox>
           </div>
           <div>
             <Checkbox isChecked={shouldStakeGmx} setIsChecked={toggleShouldStakeGmx}>
-              Stake GMX Rewards
+              Stake DIV Rewards
             </Checkbox>
           </div>
           <div>
             <Checkbox isChecked={shouldClaimEsGmx} setIsChecked={setShouldClaimEsGmx} disabled={shouldStakeEsGmx}>
-              Claim esGMX Rewards
+              Claim esDIV Rewards
             </Checkbox>
           </div>
           <div>
             <Checkbox isChecked={shouldStakeEsGmx} setIsChecked={toggleShouldStakeEsGmx}>
-              Stake esGMX Rewards
+              Stake esDIV Rewards
             </Checkbox>
           </div>
           <div>
@@ -879,12 +879,12 @@ function ClaimModal(props) {
         <div className="CompoundModal-menu">
           <div>
             <Checkbox isChecked={shouldClaimGmx} setIsChecked={setShouldClaimGmx}>
-              Claim GMX Rewards
+              Claim DIV Rewards
             </Checkbox>
           </div>
           <div>
             <Checkbox isChecked={shouldClaimEsGmx} setIsChecked={setShouldClaimEsGmx}>
-              Claim esGMX Rewards
+              Claim esDIV Rewards
             </Checkbox>
           </div>
           <div>
@@ -1178,24 +1178,24 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
     }
 
     setIsStakeModalVisible(true);
-    setStakeModalTitle("Stake GMX");
+    setStakeModalTitle("Stake DIV");
     setStakeModalMaxAmount(processedData.gmxBalance);
     setStakeValue("");
     setStakingTokenSymbol("GMX");
     setStakingTokenAddress(gmxAddress);
     setStakingFarmAddress(stakedGmxTrackerAddress);
-    setStakeMethodName("stakeGmx");
+    setStakeMethodName("stakeDIV");
   };
 
   const showStakeEsGmxModal = () => {
     setIsStakeModalVisible(true);
-    setStakeModalTitle("Stake esGMX");
+    setStakeModalTitle("Stake esDIV");
     setStakeModalMaxAmount(processedData.esGmxBalance);
     setStakeValue("");
-    setStakingTokenSymbol("esGMX");
+    setStakingTokenSymbol("esDIV");
     setStakingTokenAddress(esGmxAddress);
     setStakingFarmAddress(AddressZero);
-    setStakeMethodName("stakeEsGmx");
+    setStakeMethodName("stakeEsDIV");
   };
 
   const showGmxVesterDepositModal = () => {
@@ -1205,8 +1205,8 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
     }
 
     setIsVesterDepositModalVisible(true);
-    setVesterDepositTitle("GMX Vault");
-    setVesterDepositStakeTokenLabel("staked GMX + esGMX + Multiplier Points");
+    setVesterDepositTitle("DIV Vault");
+    setVesterDepositStakeTokenLabel("staked DIV + esDIV + Multiplier Points");
     setVesterDepositMaxAmount(remainingVestableAmount);
     setVesterDepositBalance(processedData.esGmxBalance);
     setVesterDepositEscrowedBalance(vestingData.gmxVester.escrowedBalance);
@@ -1226,8 +1226,8 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
     }
 
     setIsVesterDepositModalVisible(true);
-    setVesterDepositTitle("GLP Vault");
-    setVesterDepositStakeTokenLabel("staked GLP");
+    setVesterDepositTitle("DAT Vault");
+    setVesterDepositStakeTokenLabel("staked DAT");
     setVesterDepositMaxAmount(remainingVestableAmount);
     setVesterDepositBalance(processedData.esGmxBalance);
     setVesterDepositEscrowedBalance(vestingData.glpVester.escrowedBalance);
@@ -1247,7 +1247,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
     }
 
     setIsVesterWithdrawModalVisible(true);
-    setVesterWithdrawTitle("Withdraw from GMX Vault");
+    setVesterWithdrawTitle("Withdraw from DIV Vault");
     setVesterWithdrawAddress(gmxVesterAddress);
   };
 
@@ -1258,17 +1258,17 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
     }
 
     setIsVesterWithdrawModalVisible(true);
-    setVesterWithdrawTitle("Withdraw from GLP Vault");
+    setVesterWithdrawTitle("Withdraw from DAT Vault");
     setVesterWithdrawAddress(glpVesterAddress);
   };
 
   const showUnstakeGmxModal = () => {
     if (!isGmxTransferEnabled) {
-      helperToast.error("GMX transfers not yet enabled");
+      helperToast.error("DIV transfers not yet enabled");
       return;
     }
     setIsUnstakeModalVisible(true);
-    setUnstakeModalTitle("Unstake GMX");
+    setUnstakeModalTitle("Unstake DIV");
     let maxAmount = processedData.gmxInStakedGmx;
     if (
       processedData.gmxInStakedGmx &&
@@ -1334,11 +1334,11 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
   if (totalRewardTokensAndGlp && totalRewardTokensAndGlp.gt(0)) {
     let gmxAmountStr;
     if (processedData.gmxInStakedGmx && processedData.gmxInStakedGmx.gt(0)) {
-      gmxAmountStr = formatAmount(processedData.gmxInStakedGmx, 18, 2, true) + " GMX";
+      gmxAmountStr = formatAmount(processedData.gmxInStakedGmx, 18, 2, true) + " DIV";
     }
     let esGmxAmountStr;
     if (processedData.esGmxInStakedGmx && processedData.esGmxInStakedGmx.gt(0)) {
-      esGmxAmountStr = formatAmount(processedData.esGmxInStakedGmx, 18, 2, true) + " esGMX";
+      esGmxAmountStr = formatAmount(processedData.esGmxInStakedGmx, 18, 2, true) + " esDIV";
     }
     let mpAmountStr;
     if (processedData.bonusGmxInFeeGmx && processedData.bnGmxInFeeGmx.gt(0)) {
@@ -1346,7 +1346,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
     }
     let glpStr;
     if (processedData.glpBalance && processedData.glpBalance.gt(0)) {
-      glpStr = formatAmount(processedData.glpBalance, 18, 2, true) + " GLP";
+      glpStr = formatAmount(processedData.glpBalance, 18, 2, true) + " DAT";
     }
     const amountStr = [gmxAmountStr, esGmxAmountStr, mpAmountStr, glpStr].filter((s) => s).join(", ");
     earnMsg = (
@@ -1840,17 +1840,17 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
               <div className="App-card-row">
                 <div className="label">Total Supply</div>
                 <div>
-                  {formatKeyAmount(processedData, "glpSupply", 18, 2, true)} GLP ($
+                  {formatKeyAmount(processedData, "glpSupply", 18, 2, true)} DAT ($
                   {formatKeyAmount(processedData, "glpSupplyUsd", USD_DECIMALS, 2, true)})
                 </div>
               </div>
               <div className="App-card-divider"></div>
               <div className="App-card-options">
                 <Link className="App-button-option App-card-option" to="/buy_glp">
-                  Buy GLP
+                  Buy DAT
                 </Link>
                 <Link className="App-button-option App-card-option" to="/buy_glp#redeem">
-                  Sell GLP
+                  Sell DAT
                 </Link>
                 {hasInsurance && (
                   <a
@@ -1866,7 +1866,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
             </div>
           </div>
           <div className="App-card">
-            <div className="App-card-title">Escrowed GMX</div>
+            <div className="App-card-title">Escrowed DIV</div>
             <div className="App-card-divider"></div>
             <div className="App-card-content">
               <div className="App-card-row">
@@ -1876,14 +1876,14 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
               <div className="App-card-row">
                 <div className="label">Wallet</div>
                 <div>
-                  {formatKeyAmount(processedData, "esGmxBalance", 18, 2, true)} esGMX ($
+                  {formatKeyAmount(processedData, "esGmxBalance", 18, 2, true)} esDIV ($
                   {formatKeyAmount(processedData, "esGmxBalanceUsd", USD_DECIMALS, 2, true)})
                 </div>
               </div>
               <div className="App-card-row">
                 <div className="label">Staked</div>
                 <div>
-                  {formatKeyAmount(processedData, "esGmxInStakedGmx", 18, 2, true)} esGMX ($
+                  {formatKeyAmount(processedData, "esGmxInStakedGmx", 18, 2, true)} esDIV ($
                   {formatKeyAmount(processedData, "esGmxInStakedGmxUsd", USD_DECIMALS, 2, true)})
                 </div>
               </div>
@@ -1913,7 +1913,7 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
                               </div>
                             )}
                             <div className="Tooltip-row">
-                              <span className="label">Escrowed GMX APR</span>
+                              <span className="label">Escrowed DIV APR</span>
                               <span>{formatKeyAmount(processedData, "gmxAprForEsGmx", 2, 2, true)}%</span>
                             </div>
                           </>
@@ -1931,14 +1931,14 @@ export default function StakeV2({ setPendingTxns, connectWallet }) {
               <div className="App-card-row">
                 <div className="label">Total Staked</div>
                 <div>
-                  {formatKeyAmount(processedData, "stakedEsGmxSupply", 18, 0, true)} esGMX ($
+                  {formatKeyAmount(processedData, "stakedEsGmxSupply", 18, 0, true)} esDIV ($
                   {formatKeyAmount(processedData, "stakedEsGmxSupplyUsd", USD_DECIMALS, 0, true)})
                 </div>
               </div>
               <div className="App-card-row">
                 <div className="label">Total Supply</div>
                 <div>
-                  {formatAmount(esGmxSupply, 18, 0, true)} esGMX (${formatAmount(esGmxSupplyUsd, USD_DECIMALS, 0, true)}
+                  {formatAmount(esGmxSupply, 18, 0, true)} esDIV (${formatAmount(esGmxSupplyUsd, USD_DECIMALS, 0, true)}
                   )
                 </div>
               </div>

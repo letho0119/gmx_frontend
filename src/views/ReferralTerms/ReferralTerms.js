@@ -10,24 +10,24 @@ export default function ReferralTerms() {
       <div className="default-container Page page-layout">
         <div>
           <div className="Page-title-section center">
-            <div className="Page-title">GMX Referral Program</div>
+            <div className="Page-title">DIV Referral Program</div>
             <div className="Page-subtitle">Terms and Conditions</div>
             <div className="Page-description">Last modified: August 1st, 2022</div>
           </div>
           <div className="content">
             <div className="section">
               <p className="body-text">
-                Welcome to GMX.io ("we," "us," or "our"), the informational resource for GMX Protocol, as defined below.
+                Welcome to DIV.io ("we," "us," or "our"), the informational resource for DIV Protocol, as defined below.
               </p>
               <p className="body-text">
-                GMX.io provides information and resources about the fundamentals of the decentralized non-custodial
-                protocol called the GMX Protocol (the "GMX Protocol," "Protocol," or "GMX DApp"). GMX.io is not an
-                available access point to the GMX Protocol.
+                DIV.io provides information and resources about the fundamentals of the decentralized non-custodial
+                protocol called the DIV Protocol (the "DIV Protocol," "Protocol," or "DIV DApp"). DIV.io is not an
+                available access point to the DIV Protocol.
               </p>
               <p className="body-text">
                 These Terms and Conditions and any other documents incorporated herein by reference (collectively, these
                 "Terms") to you or the company or other legal entity you represent ("you," "your," "the Referrer," "the
-                Affiliate"), explains the terms and conditions by which you may use the GMX Referral Program ("Referral
+                Affiliate"), explains the terms and conditions by which you may use the DIV Referral Program ("Referral
                 Program") as defined below.
               </p>
               <p className="body-text">
@@ -38,14 +38,14 @@ export default function ReferralTerms() {
               <h3 className="body-title">1. USE OF THE REFERRAL PROGRAM</h3>
               <p className="body-text">All this content is for informational purposes only.</p>
               <p className="body-text">
-                The Referral Program allows you to advertise the GMX DApp, thereby driving traffic to it, whereby you
+                The Referral Program allows you to advertise the DIV DApp, thereby driving traffic to it, whereby you
                 may earn a portion of the fees generated ("Rebates") if a person that is not you ("Trader," "Referred
-                User") trades in the GMX DApp after being referred to it from a hyperlink ("Link") or manually input
+                User") trades in the DIV DApp after being referred to it from a hyperlink ("Link") or manually input
                 code ("Referral Code"). The Trader will benefit from a fee discount ("Discount") associated with the
                 Referrer's tier.
               </p>
               <p className="body-text">
-                After being referred to the GMX DApp from a Link, the Trader's browser will save your Referral Code,
+                After being referred to the DIV DApp from a Link, the Trader's browser will save your Referral Code,
                 which will be assigned to the Trader on his first trade.
               </p>
               <p className="body-text">
@@ -55,7 +55,7 @@ export default function ReferralTerms() {
             <div className="section">
               <h3 className="body-title">2. OBLIGATIONS</h3>
               <p className="body-text">
-                2.1 As an Affiliate, GMX DApp provides you with the Links and Referral Codes necessary to promote the
+                2.1 As an Affiliate, DIV DApp provides you with the Links and Referral Codes necessary to promote the
                 GMX Protocol. You acknowledge and agree it is your sole responsibility to indicate your correct Referral
                 Code. You may promote the GMX Protocol offers in any manner you choose unless it misleads someone about
                 the GMX Protocol.

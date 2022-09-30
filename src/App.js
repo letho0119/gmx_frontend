@@ -7,11 +7,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Web3ReactProvider, useWeb3React } from "@web3-react/core";
 import { Web3Provider } from "@ethersproject/providers";
 import useScrollToTop from "./hooks/useScrollToTop";
-import TRADE from "./img/trade.jpg";
-import EARN from "./img/earn.jpg";
-import BUY from "./img/buy.jpg";
-import STATS from "./img/stats.jpg";
-import REFERRALS from "./img/referrals.jpg";
+import TRADE from "./img/trade.png";
+import EARN from "./img/earn.png";
+import BUY from "./img/buy.png";
+import STATS from "./img/stats.png";
+import REFERRALS from "./img/referrals.png";
 import { Switch, Route, NavLink, HashRouter as Router, Redirect, useLocation, useHistory } from "react-router-dom";
 
 import {
@@ -193,7 +193,11 @@ function AppHeaderLinks({ HeaderLink, small, openSettings, clickCloseIcon }) {
             <FiX className="App-header-menu-icon" />
           </div>
           <HeaderLink isHomeLink={true} className="App-header-link-main" to="/">
-            <img src={logosmall_divvy} alt="Divvy Logo Nav" style={{ marginTop: "20px" }} />
+            <img
+              src="https://i.ibb.co/K9wgdKH/z-AKa-Mj-PQ-removebg-preview.png"
+              alt="Divvy Logo Nav"
+              style={{ marginLeft: "-30px", marginTop: "20px", width: "250px", height: "130px" }}
+            />
           </HeaderLink>
         </div>
       )}

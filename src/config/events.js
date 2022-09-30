@@ -69,7 +69,7 @@ export const appEventsData = [
   //   title: "Referral Program Launch",
   //   isActive: true,
   //   validTill: "4 May 2022, 12:00",
-  //   bodyText: "The GMX referral program is now live! Get fee discounts and refer traders to earn rewards.",
+  //   bodyText: "The DIV referral program is now live! Get fee discounts and refer traders to earn rewards.",
   //   buttons: [
   //     {
   //       text: "Read More",
