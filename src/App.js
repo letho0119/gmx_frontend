@@ -65,6 +65,7 @@ import Actions from "./views/Actions/Actions";
 import OrdersOverview from "./views/OrdersOverview/OrdersOverview";
 import PositionsOverview from "./views/PositionsOverview/PositionsOverview";
 import Referrals from "./views/Referrals/Referrals";
+import Presale from "./views/Presale/Presale";
 import BuyGlp from "./views/BuyGlp/BuyGlp";
 import BuyGMX from "./views/BuyGMX/BuyGMX";
 import Buy from "./views/Buy/Buy";
@@ -239,6 +240,14 @@ function AppHeaderLinks({ HeaderLink, small, openSettings, clickCloseIcon }) {
           <span style={{ display: "flex", alignItems: "center" }}>
             <img src={STATS} alt="stats" style={{ width: "40px;", height: "40px", marginRight: "20px" }}></img>
             <span style={{ fontSize: "20px" }}>Stats</span>
+          </span>
+        </HeaderLink>
+      </div>
+      <div className="App-header-link-container">
+        <HeaderLink to="/presale">
+          <span style={{ display: "flex", alignItems: "center" }}>
+            <img src={BUY} alt="stats" style={{ width: "40px;", height: "40px", marginRight: "20px" }}></img>
+            <span style={{ fontSize: "20px" }}>Presale</span>
           </span>
         </HeaderLink>
       </div>
@@ -926,6 +935,9 @@ const FullApp = () => {
               </Route>
               <Route exact path="/actions">
                 <Actions />
+              </Route>
+              <Route exact path="/presale">
+                <Presale />
               </Route>
               <Route exact path="/actions/:account">
                 <Actions />
